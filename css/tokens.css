@@ -1,0 +1,65 @@
+/* ==========================================================================
+   DESIGN TOKENS — SORVEBOM (TASTE REFINED)
+   Micro-tipografia, paleta equilibrada e ritmo vertical baseado em grid 8pt.
+   ========================================================================== */
+
+:root {
+  /* --- Cores da Marca Sorvebom --- */
+  --color-primary: #C8005A;             /* Magenta oficial Sorvebom */
+  --color-primary-hover: #A8004B;       /* Tom escuro para hover com contraste WCAG AAA */
+  --color-primary-subtle: #FDF2F7;      /* Fundo suave para tags e acentos */
+  --color-primary-border: #F9A8D4;
+
+  /* --- Amarelo Solar da Tradição --- */
+  --color-sun: #FFC83B;                 /* Amarelo clássico de apoio */
+  --color-sun-light: #FFF9E6;
+
+  /* --- Superfícies e Linhas (Human Crafted) --- */
+  --color-bg: #FFFFFF;
+  --color-bg-subtle: #F8F9FA;           /* Cinza suave para alternância de seções */
+  --color-surface: #FFFFFF;
+  --color-border: #E4E4E7;              /* Linhas neutras e discretas de 1px */
+  --color-border-subtle: #F4F4F5;
+
+  /* --- Textos de Alta Precisão Tipográfica --- */
+  --color-text-title: #09090B;          /* Títulos sólidos com alto contraste */
+  --color-text-body: #3F3F46;           /* Corpo de texto confortável (Zinc 700) */
+  --color-text-muted: #71717A;          /* Metadados e notas (Zinc 500) */
+  --color-text-inverse: #FFFFFF;
+
+  /* --- Conversão Direta (WhatsApp) --- */
+  --color-whatsapp: #15803D;            /* Verde esmeralda sóbrio e legível */
+  --color-whatsapp-hover: #166534;
+
+  /* --- Tipografia --- */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* --- Escala Tipográfica Modular --- */
+  --text-xs: 0.8125rem;                 /* 13px */
+  --text-sm: 0.9375rem;                 /* 15px */
+  --text-base: 1.0625rem;               /* 17px */
+  --text-lg: 1.25rem;                   /* 20px */
+  --text-xl: 1.5rem;                    /* 24px */
+  --text-2xl: 2rem;                     /* 32px */
+  --text-3xl: 2.5rem;                   /* 40px */
+  --text-hero: clamp(2.35rem, 2rem + 2vw, 3.5rem);
+
+  /* --- Grid & Espaçamento Base 8px --- */
+  --container-max: 1180px;
+  --gutter: clamp(1.25rem, 3.5vw, 2.5rem);
+  --section-pad: clamp(4.5rem, 6.5vw, 6.5rem);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* --- Sombras Reais Multicamadas (Ambient + Direct Light) --- */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 2px 6px rgba(0, 0, 0, 0.06), 0 12px 28px rgba(0, 0, 0, 0.08);
+  --shadow-primary-btn: 0 1px 2px rgba(200, 0, 90, 0.16), 0 6px 20px rgba(200, 0, 90, 0.24);
+
+  /* --- Transições --- */
+  --transition-fast: 140ms ease;
+  --transition-normal: 220ms ease;
+}
