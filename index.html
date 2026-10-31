@@ -4,34 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO e Metadados Institucionais -->
-  <title>Sorvebom | Indústria e Lojas de Sorvetes Desde 1983</title>
-  <meta name="description" content="Indústria de sorvetes e picolés com sede em Lajeado (RS). Mais de 150 produtos certificados pela norma internacional FSSC 22000. Atendimento a lojistas, supermercados e lojas próprias.">
+  <title>Sorvebom | Sorvetes e picolés do Vale do Taquari desde 1983</title>
+  <meta name="description" content="Picolés, casquinhas e potes de sorvete feitos em Lajeado (RS) desde 1983. Mais de 150 opções, lojas com bufê e revenda para comércios.">
   <link rel="canonical" href="https://www.sorvebom.com.br/">
-
-  <!-- Favicon -->
+  <meta name="theme-color" content="#C8005A">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.sorvebom.com.br/">
-  <meta property="og:title" content="Sorvebom | Indústria e Lojas de Sorvetes Desde 1983">
-  <meta property="og:description" content="Sorvetes, picolés e potes de sobremesa produzidos no Vale do Taquari (RS). Conheça a linha completa e pontos de venda.">
+  <meta property="og:title" content="Sorvebom | A vida tem nosso sabor">
+  <meta property="og:description" content="Picolés, casquinhas e potes feitos no Vale do Taquari (RS) desde 1983.">
   <meta property="og:image" content="assets/images/hero-summer-girl.jpg">
 
-  <!-- Tipografia Única de Alta Precisão: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Dados Estruturados Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "IceCreamShop",
     "name": "Sorvebom Sorvetes",
     "foundingDate": "1983",
-    "description": "Indústria gaúcha de sorvetes e picolés fundada em 1983 em Lajeado (RS), com certificação internacional de segurança de alimentos FSSC 22000.",
+    "description": "Fábrica gaúcha de sorvetes e picolés fundada em 1983 em Lajeado (RS), com certificação FSSC 22000.",
     "url": "https://www.sorvebom.com.br/",
     "telephone": "+555137101094",
     "address": {
@@ -41,355 +36,275 @@
       "addressRegion": "RS",
       "postalCode": "95901-050",
       "addressCountry": "BR"
-    }
+    },
+    "sameAs": ["https://www.instagram.com/sorvebom/"]
   }
   </script>
 
-  <!-- Estilos Modulares -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
-  <!-- ======================================================================
-       NAVBAR INSTITUCIONAL
-       ====================================================================== -->
   <header class="site-nav">
-    <div class="container nav-container">
-      <a href="#inicio" class="nav-logo-wrap" aria-label="Página inicial Sorvebom">
-        <img src="assets/brand/logo-sorvebom.png" alt="Logotipo Sorvebom" class="nav-logo-img">
+    <div class="container nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="Sorvebom, voltar ao início">
+        <img src="assets/brand/logo-sorvebom.png" alt="Sorvebom" width="600" height="400">
       </a>
 
-      <nav class="nav-links" aria-label="Navegação Principal">
-        <a href="#inicio" class="nav-link active">Início</a>
-        <a href="#produtos" class="nav-link">Produtos</a>
-        <a href="#sobre" class="nav-link">História &amp; Qualidade</a>
-        <a href="#lojas" class="nav-link">Lojas &amp; Revenda</a>
+      <nav class="nav-links" id="menu" aria-label="Principal">
+        <a href="#sabores">Sabores</a>
+        <a href="#historia">Nossa história</a>
+        <a href="#lojas">Lojas</a>
+        <a href="#revenda">Revenda</a>
       </nav>
 
-      <div class="nav-actions">
-        <a href="#lojas" class="btn-nav-outline">
-          <span>Seja um Revendedor</span>
-        </a>
-        <a href="#" data-whatsapp data-whatsapp-message="Olá! Gostaria de falar com o time comercial da Sorvebom." class="btn-nav-primary">
-          <span>Contato Comercial</span>
-        </a>
+      <a href="#" data-whatsapp class="btn btn-berry nav-cta">Pedir pelo WhatsApp</a>
 
-        <button class="mobile-toggle" aria-expanded="false" aria-label="Abrir menu de navegação">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
     </div>
   </header>
 
   <main>
-    <!-- ====================================================================
-         HERO SECTION
-         ==================================================================== -->
-    <section class="hero-open" id="inicio">
-      <div class="container hero-grid-open">
-
-        <div class="hero-content-left">
-          <span class="eyebrow">Tradição do Vale do Taquari desde 1983</span>
-
-          <h1 class="hero-title-open">
-            Sabores que acompanham os seus melhores momentos
-          </h1>
-
-          <p class="hero-desc-open">
-            Das clássicas casquinhas aos picolés trufados da Linha Mag e potes de 2 litros para o almoço de domingo. Feito com carinho no Rio Grande do Sul e distribuído nos principais pontos de venda do Sul.
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Lajeado, RS · desde 1983</span>
+          <h1>A vida tem nosso sabor.</h1>
+          <p class="hero-lede">
+            Picolés, casquinhas e potes feitos na nossa fábrica no Vale do Taquari. Do Mag com casquinha de chocolate ao pote de Torta Alemã do almoço de domingo.
           </p>
-
-          <div class="hero-actions-open">
-            <a href="#produtos" class="btn-hero-primary">
-              Ver sabores e produtos
-            </a>
-            <a href="#lojas" class="btn-hero-secondary">
-              Onde encontrar
-            </a>
+          <div class="hero-actions">
+            <a href="#sabores" class="btn btn-sun">Ver os sabores</a>
+            <a href="#lojas" class="btn btn-ghost">Onde encontrar</a>
           </div>
         </div>
 
-        <div class="hero-visual-right">
-          <div class="hero-sun-circle" aria-hidden="true"></div>
-
-          <div class="hero-subject-wrap">
-            <img src="assets/images/hero-summer-girl.jpg" alt="Consumidora saboreando casquinha de sorvete Sorvebom" class="hero-subject-img" fetchpriority="high">
+        <div class="hero-visual">
+          <div class="hero-sun" aria-hidden="true"></div>
+          <div class="popsicle">
+            <img src="assets/images/hero-summer-girl.jpg" alt="Moça tomando sorvete de casquinha num dia de sol" width="1024" height="682" fetchpriority="high">
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         DADOS INDUSTRIAIS E DE MERCADO
-         ==================================================================== -->
-    <section class="trust-strip">
-      <div class="container trust-grid">
-        <div class="trust-item">
-          <strong>Fundada em 1983</strong>
-          <span>Mais de quatro décadas de atuação contínua no Rio Grande do Sul</span>
-        </div>
-
-        <div class="trust-item">
-          <strong>Certificação FSSC 22000</strong>
-          <span>Auditoria internacional de segurança de alimentos em toda a cadeia</span>
-        </div>
-
-        <div class="trust-item">
-          <strong>Mais de 150 itens ativos</strong>
-          <span>Picolés ao leite e de frutas, potes de 1L a 7L, açaí e linha diet/zero</span>
-        </div>
-
-        <div class="trust-item">
-          <strong>Logística própria</strong>
-          <span>Frota com controle térmico para abastecimento regular de freezers</span>
+          <div class="popsicle-stick" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         CATÁLOGO DE PRODUTOS
-         ==================================================================== -->
-    <section class="section" id="produtos">
+    <svg class="drip" viewBox="0 0 1440 120" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M0 0H1440V24L1276 24C1264 24 1264 30 1264 40V88A14 14 0 0 1 1236 88V40C1236 30 1236 24 1224 24L1032 24C1020 24 1020 30 1020 40V58A10 10 0 0 1 1000 58V40C1000 30 1000 24 988 24L748 24C736 24 736 30 736 40V100A16 16 0 0 1 704 100V40C704 30 704 24 692 24L453 24C441 24 441 30 441 40V69A11 11 0 0 1 419 69V40C419 30 419 24 407 24L176 24C164 24 164 30 164 40V80A14 14 0 0 1 136 80V40C136 30 136 24 124 24L0 24Z"/>
+    </svg>
+
+    <div class="container facts">
+      <div class="fact">
+        <strong>1983</strong>
+        <span>primeira sorveteria, entre Estrela e Lajeado</span>
+      </div>
+      <div class="fact">
+        <strong>150+</strong>
+        <span>picolés, potes, açaí e linha zero no catálogo</span>
+      </div>
+      <div class="fact">
+        <strong>FSSC 22000</strong>
+        <span>certificação internacional de segurança de alimentos</span>
+      </div>
+      <div class="fact">
+        <strong>3 lojas</strong>
+        <span>com bufê de sorvete em Lajeado</span>
+      </div>
+    </div>
+
+    <section class="section" id="sabores">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="eyebrow">Picolés e sorvetes para cada momento</span>
-          <h2>Nossos sabores em destaque</h2>
-          <p>
-            Opções para consumo imediato em picolés e potes para sobremesa familiar ou atendimento a bufês de sorveterias e restaurantes.
-          </p>
-        </div>
+        <div class="flavors-head">
+          <div>
+            <span class="eyebrow">Do freezer da esquina</span>
+            <h2>Os mais pedidos</h2>
+            <p>Uma amostra das mais de 150 opções. O catálogo completo a gente manda pelo WhatsApp.</p>
+          </div>
 
-        <div class="text-center" style="margin-bottom: 2.75rem;">
-          <div class="catalog-segmented-control" role="tablist" aria-label="Filtrar por linha de produtos">
-            <button type="button" class="catalog-tab-btn active" data-filter="todos">Todos os destaques</button>
-            <button type="button" class="catalog-tab-btn" data-filter="mag">Linha Mag</button>
-            <button type="button" class="catalog-tab-btn" data-filter="potes">Potes de 2 litros</button>
+          <div class="tabs" role="tablist" aria-label="Filtrar sabores">
+            <button type="button" class="tab" role="tab" aria-selected="true" data-filter="todos">Todos</button>
+            <button type="button" class="tab" role="tab" aria-selected="false" data-filter="mag">Linha Mag</button>
+            <button type="button" class="tab" role="tab" aria-selected="false" data-filter="potes">Potes</button>
           </div>
         </div>
 
-        <div class="products-grid-open">
-
-          <!-- Item 1: Mag Cookies -->
-          <article class="product-card-open" data-category="mag">
-            <div class="product-thumb-container">
-              <span class="product-tag-pill">Linha Mag</span>
-              <img src="assets/images/prod-mag-cookies.jpg" alt="Picolé Mag Cookies" loading="lazy">
+        <div class="flavor-grid">
+          <article class="flavor flavor--cookies" data-category="mag">
+            <div class="flavor-photo">
+              <img src="assets/images/prod-mag-cookies.jpg" alt="Picolé Mag Cookies mordido" width="1024" height="1024" loading="lazy">
             </div>
-            <h3 class="product-card-title">Mag Cookies</h3>
-            <p class="product-card-desc">
-              Picolé de baunilha envolvido em cobertura de chocolate branco enriquecida com biscoito de cacau triturado.
-            </p>
-            <a href="#" data-whatsapp data-whatsapp-message="Olá! Gostaria de informações comerciais sobre o Picolé Mag Cookies da Sorvebom." class="btn-card-order">
-              Consultar produto
-            </a>
+            <span class="flavor-line">Linha Mag</span>
+            <h3>Mag Cookies</h3>
+            <p>Baunilha com cobertura de chocolate branco e biscoito de cacau triturado.</p>
+            <a href="#" data-whatsapp data-whatsapp-message="Oi! Quero saber onde encontrar o Mag Cookies da Sorvebom." class="flavor-link">Pedir pelo WhatsApp</a>
           </article>
 
-          <!-- Item 2: Mag Bombom -->
-          <article class="product-card-open" data-category="mag">
-            <div class="product-thumb-container">
-              <span class="product-tag-pill">Linha Mag</span>
-              <img src="assets/images/prod-mag-bombom.jpg" alt="Picolé Mag Bombom" loading="lazy">
+          <article class="flavor flavor--bombom" data-category="mag">
+            <div class="flavor-photo">
+              <img src="assets/images/prod-mag-bombom.jpg" alt="Picolé Mag Bombom com avelã e recheio de doce de leite" width="1024" height="1024" loading="lazy">
             </div>
-            <h3 class="product-card-title">Mag Bombom</h3>
-            <p class="product-card-desc">
-              Cobertura de chocolate ao leite com pedaços de avelã tostada e núcleo com recheio de doce de leite.
-            </p>
-            <a href="#" data-whatsapp data-whatsapp-message="Olá! Gostaria de informações comerciais sobre o Picolé Mag Bombom da Sorvebom." class="btn-card-order">
-              Consultar produto
-            </a>
+            <span class="flavor-line">Linha Mag</span>
+            <h3>Mag Bombom</h3>
+            <p>Chocolate ao leite com avelã tostada e recheio de doce de leite no meio.</p>
+            <a href="#" data-whatsapp data-whatsapp-message="Oi! Quero saber onde encontrar o Mag Bombom da Sorvebom." class="flavor-link">Pedir pelo WhatsApp</a>
           </article>
 
-          <!-- Item 3: Pote Torta Alemã -->
-          <article class="product-card-open" data-category="potes">
-            <div class="product-thumb-container">
-              <span class="product-tag-pill">Pote 2 Litros</span>
-              <img src="assets/images/prod-pote-torta-alema.jpg" alt="Pote de Sorvete Torta Alemã" loading="lazy">
+          <article class="flavor flavor--torta" data-category="potes">
+            <div class="flavor-photo">
+              <img src="assets/images/prod-pote-torta-alema.jpg" alt="Bolas de sorvete Torta Alemã com calda de chocolate e biscoito" width="1024" height="1024" loading="lazy">
             </div>
-            <h3 class="product-card-title">Torta Alemã &amp; Mu-Mu</h3>
-            <p class="product-card-desc">
-              Sorvete de creme mesclado com calda de ganache de chocolate, biscoito doce e o tradicional doce de leite Mu-Mu.
-            </p>
-            <a href="#" data-whatsapp data-whatsapp-message="Olá! Gostaria de informações comerciais sobre os potes de sorvete de 2 litros da Sorvebom." class="btn-card-order">
-              Consultar produto
-            </a>
+            <span class="flavor-line">Pote 2 litros</span>
+            <h3>Torta Alemã</h3>
+            <p>Creme com ganache de chocolate, biscoito doce e doce de leite Mu-Mu.</p>
+            <a href="#" data-whatsapp data-whatsapp-message="Oi! Quero saber onde encontrar o pote de Torta Alemã da Sorvebom." class="flavor-link">Pedir pelo WhatsApp</a>
           </article>
-
         </div>
 
-        <!-- Ação Centralizada para Catálogo Completo via WhatsApp -->
-        <div class="catalog-footer-action">
-          <a href="#" data-whatsapp data-whatsapp-message="Olá! Gostaria de conferir o catálogo completo com todos os mais de 150 produtos e a tabela de valores da Sorvebom." class="btn-catalog-complete">
-            <span>Conferir catálogo completo</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <div class="catalog-cta">
+          <a href="#" data-whatsapp data-whatsapp-message="Oi! Pode me mandar o catálogo completo da Sorvebom?" class="btn btn-berry">
+            Conferir catálogo completo
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"></path>
-              <path d="M12 5l7 7-7 7"></path>
+              <path d="M13 6l6 6-6 6"></path>
             </svg>
           </a>
-          <p class="catalog-footer-note">
-            Receba a relação completa com mais de 150 itens, incluindo picolés de frutas, açaí, potes de 1L a 7L e linhas diet/zero.
-          </p>
+          <p>Picolés de fruta, açaí, potes de 1 a 7 litros e linha zero.</p>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         HISTÓRIA INDUSTRIAL & CERTIFICAÇÃO FSSC 22000
-         ==================================================================== -->
-    <section class="section section-subtle" id="sobre">
-      <div class="container story-open-grid">
-
-        <div class="story-mosaic">
-          <div class="mosaic-main">
-            <img src="assets/images/hero-sharing-cone.jpg" alt="Consumo compartilhado de sorvete artesanal" loading="lazy">
+    <section class="section story" id="historia">
+      <div class="container story-grid">
+        <div class="story-photos">
+          <div class="story-photo-main">
+            <img src="assets/images/hero-sharing-cone.jpg" alt="Duas pessoas dividindo uma casquinha com colheres" width="500" height="750" loading="lazy">
           </div>
-          <div class="mosaic-stack">
-            <div class="mosaic-sub">
-              <img src="assets/images/lifestyle-beach-cone.jpg" alt="Consumo de picolé em ambiente externo" loading="lazy">
-            </div>
-            <div class="mosaic-sub">
-              <img src="assets/images/prod-pote-torta-alema.jpg" alt="Apresentação de sorvete de pote Torta Alemã" loading="lazy">
-            </div>
+          <div class="story-photo-side">
+            <img src="assets/images/lifestyle-beach-cone.jpg" alt="Moça com sorvete na orla da praia" width="500" height="750" loading="lazy">
           </div>
         </div>
 
-        <div class="story-content">
+        <div class="story-text">
           <span class="eyebrow">Nossa história</span>
-          <h2>Produção industrial responsável desde 1983</h2>
+          <h2>Começou numa sorveteria de família.</h2>
           <p>
-            A história da Sorvebom iniciou-se em Estrela e Lajeado, no interior do Rio Grande do Sul, fundada por Martin e Tania Eckhardt. Inicialmente artesanal, a marca expandiu suas instalações no bairro Moinhos e tornou-se pioneira no Sul do Brasil a estruturar o sistema de bufê completo de sorvetes.
+            Martin e Tania Eckhardt abriram a Sorvebom em 1983, ainda artesanal, entre Estrela e Lajeado. A fábrica cresceu no bairro Moinhos e hoje abastece freezers por todo o Rio Grande do Sul.
           </p>
           <p>
-            Com investimento constante em maquinário industrial, sustentabilidade e controle de processos, foi precursora no estado a conquistar certificações internacionais de segurança de alimentos (ISO 22000 e FSSC 22000).
+            A família segue na direção da fábrica e das lojas próprias.
           </p>
 
-          <div class="story-check-list">
-            <div class="story-check-item">
-              <span class="check-mark">✓</span>
-              <span>Estrutura fabril com capacidade para abastecer redes de varejo e atacado</span>
+          <dl class="timeline">
+            <div>
+              <dt>1983</dt>
+              <dd>Produção artesanal, ainda em pequena escala.</dd>
             </div>
-            <div class="story-check-item">
-              <span class="check-mark">✓</span>
-              <span>Controle rigoroso de ingredientes e processos industriais certificados pela FSSC 22000</span>
+            <div>
+              <dt>Bufê</dt>
+              <dd>Uma das primeiras sorveterias do Sul a montar o bufê completo de sorvete.</dd>
             </div>
-            <div class="story-check-item">
-              <span class="check-mark">✓</span>
-              <span>Gestão familiar com presença ativa na direção e expansão de lojas próprias</span>
+            <div>
+              <dt>FSSC 22000</dt>
+              <dd>Pioneira no estado em certificação internacional de segurança de alimentos.</dd>
             </div>
-          </div>
-
-          <a href="#" data-whatsapp data-whatsapp-message="Olá! Gostaria de receber a apresentação institucional da Sorvebom." class="btn-hero-primary">
-            Falar com a gerência industrial
-          </a>
+          </dl>
         </div>
-
       </div>
     </section>
 
-    <!-- ====================================================================
-         LOJAS PRÓPRIAS E ATENDIMENTO A LOJISTAS
-         ==================================================================== -->
-    <section class="section" id="lojas">
-      <div class="container">
-        <div class="franchise-banner-open">
-          <div>
-            <span class="eyebrow">Lojas e parcerias</span>
-            <h2 style="margin-top: 0.5rem; margin-bottom: 0.85rem;">Unidades físicas e parceria de revenda</h2>
-            <p style="margin-bottom: 1.5rem; font-size: var(--text-base); color: var(--color-text-body);">
-              Conheça as lojas com bufê completo na região de Lajeado ou entre em contato com nosso departamento comercial para receber freezer em consignação ou fornecimento no atacado.
-            </p>
+    <section class="section stores" id="lojas">
+      <div class="container stores-grid">
+        <div class="stores-intro">
+          <span class="eyebrow">Onde encontrar</span>
+          <h2>Passa lá na loja</h2>
+          <p>Três lojas com bufê em Lajeado, e a fábrica no bairro Moinhos.</p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-              <a href="#" data-whatsapp data-whatsapp-message="Olá! Tenho um comércio e quero revender sorvetes Sorvebom." class="btn-hero-primary">
-                Atendimento a revendedores
-              </a>
-              <a href="https://www.instagram.com/sorvebom/" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary">
-                Instagram institucional
-              </a>
-            </div>
-          </div>
-
-          <div class="stores-stack-open" aria-label="Endereços em Lajeado e região">
-            <div class="store-row-card">
+          <ul class="store-list">
+            <li class="store">
               <div>
-                <h4>Fábrica e Matriz</h4>
-                <p>Av. Pres. Castelo Branco, 735 • Bairro Moinhos, Lajeado - RS</p>
+                <h3>Shopping Lajeado</h3>
+                <p>BR-386, km 346</p>
               </div>
-              <a href="tel:+555137101094" class="store-link-phone">(51) 3710-1094</a>
-            </div>
-
-            <div class="store-row-card">
+              <a href="tel:+5551999793004">(51) 99979-3004</a>
+            </li>
+            <li class="store">
               <div>
-                <h4>Loja Shopping Lajeado</h4>
-                <p>Rodovia BR-386, KM 346 • Lajeado - RS</p>
+                <h3>Centro, Benjamin Constant</h3>
+                <p>Av. Benjamin Constant, 1094</p>
               </div>
-              <a href="tel:+5551999793004" class="store-link-phone">(51) 99979-3004</a>
-            </div>
-
-            <div class="store-row-card">
+              <a href="tel:+555137101344">(51) 3710-1344</a>
+            </li>
+            <li class="store">
               <div>
-                <h4>Loja Centro — Benjamin Constant</h4>
-                <p>Av. Benjamin Constant, 1094 • Centro, Lajeado - RS</p>
+                <h3>Centro, Júlio de Castilhos</h3>
+                <p>Rua Júlio de Castilhos, 630</p>
               </div>
-              <a href="tel:+555137101344" class="store-link-phone">(51) 3710-1344</a>
-            </div>
-
-            <div class="store-row-card">
+              <a href="tel:+555137144530">(51) 3714-4530</a>
+            </li>
+            <li class="store">
               <div>
-                <h4>Loja Centro — Júlio de Castilhos</h4>
-                <p>Rua Júlio de Castilhos, 630 • Centro, Lajeado - RS</p>
+                <h3>Fábrica</h3>
+                <p>Av. Pres. Castelo Branco, 735, Moinhos</p>
               </div>
-              <a href="tel:+555137144530" class="store-link-phone">(51) 3714-4530</a>
-            </div>
+              <a href="tel:+555137101094">(51) 3710-1094</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resale" id="revenda">
+          <span class="eyebrow">Revenda</span>
+          <h3>Tem um mercado, bar ou lancheria?</h3>
+          <p>
+            A Sorvebom empresta o freezer em consignação e entrega no atacado. Chama o comercial no WhatsApp e combina a primeira entrega.
+          </p>
+          <div class="resale-actions">
+            <a href="#" data-whatsapp data-whatsapp-message="Oi! Tenho um comércio e quero revender Sorvebom." class="btn btn-sun">Quero revender</a>
+            <a href="https://www.instagram.com/sorvebom/" target="_blank" rel="noopener noreferrer" class="text-link">@sorvebom no Instagram</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ======================================================================
-       WHATSAPP FLUTUANTE
-       ====================================================================== -->
-  <a href="#" data-whatsapp class="floating-whatsapp" aria-label="Atendimento comercial pelo WhatsApp">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+  <a href="#" data-whatsapp class="float-whatsapp" aria-label="Conversar pelo WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
     </svg>
-    <span>Contato comercial</span>
+    <span>WhatsApp</span>
   </a>
 
-  <!-- ======================================================================
-       RODAPÉ
-       ====================================================================== -->
-  <footer class="site-footer-open">
+  <svg class="drip drip-choco" viewBox="0 0 1440 120" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M0 0H1440V24L1276 24C1264 24 1264 30 1264 40V88A14 14 0 0 1 1236 88V40C1236 30 1236 24 1224 24L1032 24C1020 24 1020 30 1020 40V58A10 10 0 0 1 1000 58V40C1000 30 1000 24 988 24L748 24C736 24 736 30 736 40V100A16 16 0 0 1 704 100V40C704 30 704 24 692 24L453 24C441 24 441 30 441 40V69A11 11 0 0 1 419 69V40C419 30 419 24 407 24L176 24C164 24 164 30 164 40V80A14 14 0 0 1 136 80V40C136 30 136 24 124 24L0 24Z"/>
+  </svg>
+
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-top-row">
+      <div class="footer-top">
         <div>
-          <a href="#inicio" aria-label="Página inicial Sorvebom">
-            <img src="assets/brand/logo-sorvebom.png" alt="Sorvebom Sorvetes" style="height: 2.25rem; width: auto; background: #fff; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); margin-bottom: 0.75rem;">
-          </a>
-          <p style="font-size: var(--text-xs); color: rgba(255, 255, 255, 0.65); max-width: 380px;">
-            Sorvebom Sorvetes Ltda. Av. Presidente Castelo Branco, 735, Lajeado - RS. Registro industrial e certificação FSSC 22000.
-          </p>
+          <img src="assets/brand/logo-sorvebom.png" alt="Sorvebom" class="footer-logo" width="600" height="400">
+          <p>Sorvebom Sorvetes Ltda. Av. Presidente Castelo Branco, 735, Lajeado, RS.</p>
         </div>
 
-        <nav class="footer-links-row" aria-label="Links do rodapé">
-          <a href="#inicio">Início</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#sobre">História</a>
+        <nav class="footer-links" aria-label="Rodapé">
+          <a href="#sabores">Sabores</a>
+          <a href="#historia">Nossa história</a>
           <a href="#lojas">Lojas</a>
+          <a href="#revenda">Revenda</a>
           <a href="https://www.instagram.com/sorvebom/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </nav>
       </div>
 
-      <div class="footer-bottom-row">
-        <p>&copy; <span id="current-year">2026</span> Sorvebom Sorvetes. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <strong>MCode</strong></p>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Sorvebom Sorvetes</p>
+        <p>Site por <strong>MCode</strong></p>
       </div>
     </div>
   </footer>

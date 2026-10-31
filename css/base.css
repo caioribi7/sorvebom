@@ -1,38 +1,34 @@
 /* ==========================================================================
-   BASE & RESET — SORVEBOM (TASTE REFINED)
+   BASE — reset e tipografia
    ========================================================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: var(--text-base);
-  line-height: 1.65;
-  color: var(--color-text-body);
-  background-color: var(--color-bg);
-  min-height: 100vh;
+  line-height: 1.6;
+  color: var(--ink-body);
+  background: var(--milk);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
-img, picture, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
-  height: auto;
-}
-
-button, input, select, textarea {
-  font: inherit;
-  color: inherit;
 }
 
 a {
@@ -40,97 +36,88 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul {
   list-style: none;
 }
 
-::selection {
-  background-color: var(--color-primary-subtle);
-  color: var(--color-primary);
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}
-
-.section {
-  padding-top: var(--section-pad);
-  padding-bottom: var(--section-pad);
-  position: relative;
-}
-
-.section-subtle {
-  background-color: var(--color-bg-subtle);
-}
-
-h1, h2, h3, h4 {
-  color: var(--color-text-title);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-}
-
-h1 {
-  font-size: var(--text-hero);
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 h2 {
-  font-size: var(--text-3xl);
-  font-weight: 800;
-  line-height: 1.16;
+  font-size: var(--text-2xl);
 }
 
 h3 {
   font-size: var(--text-xl);
   font-weight: 700;
-  line-height: 1.25;
 }
 
 p {
-  color: var(--color-text-body);
-  line-height: 1.65;
+  text-wrap: pretty;
 }
 
-.section-header {
-  max-width: 600px;
-  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-.section-header.text-center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.section {
+  padding-block: var(--section);
 }
 
-.section-header h2 {
-  margin-top: 0.65rem;
-  margin-bottom: 0.65rem;
-}
-
-.section-header p {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
-  line-height: 1.6;
-}
-
-/* Sobretítulo editorial natural (sem contornos de SaaS, sem caixas artificiais) */
 .eyebrow {
-  display: inline-block;
-  font-size: var(--text-sm);
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 0.65rem;
+  line-height: 1.2;
+  color: var(--berry);
+  margin-bottom: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }

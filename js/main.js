@@ -1,127 +1,63 @@
-/**
- * MAIN JAVASCRIPT — SORVEBOM (IMPECCABLE EDITION)
- * Comportamento essencial: navegação móvel, filtro de produtos,
- * rolagem suave e links comerciais de WhatsApp.
- */
-
-const SORVEBOM_CONFIG = {
-  whatsappNumber: '5551999793004',
-  defaultMessage: 'Olá! Gostaria de falar com o time comercial da Sorvebom.'
-};
+const WHATSAPP_NUMBER = '5551999793004';
+const WHATSAPP_DEFAULT = 'Oi! Vim pelo site da Sorvebom.';
 
 document.addEventListener('DOMContentLoaded', () => {
-  setupNavbarScroll();
-  setupMobileNav();
-  setupCatalogTabs();
+  setupNavShadow();
+  setupMobileMenu();
+  setupFlavorTabs();
   setupWhatsAppLinks();
-  setupSmoothScroll();
-  setupCurrentYear();
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 
-/**
- * Adiciona sombra sutil à barra de navegação ao rolar
- */
-function setupNavbarScroll() {
-  const navbar = document.querySelector('.site-nav');
-  if (!navbar) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  }, { passive: true });
+function setupNavShadow() {
+  const nav = document.querySelector('.site-nav');
+  const update = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
 }
 
-/**
- * Menu móvel responsivo com acessibilidade
- */
-function setupMobileNav() {
-  const toggleBtn = document.querySelector('.mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
+function setupMobileMenu() {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
 
-  if (!toggleBtn || !navLinks) return;
+  const setOpen = (open) => {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    menu.classList.toggle('open', open);
+  };
 
-  toggleBtn.addEventListener('click', () => {
-    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
-    navLinks.classList.toggle('active');
+  toggle.addEventListener('click', () => {
+    setOpen(toggle.getAttribute('aria-expanded') !== 'true');
   });
 
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('active');
-    });
+  menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
   });
 }
 
-/**
- * Filtro por categorias no catálogo de produtos
- */
-function setupCatalogTabs() {
-  const tabButtons = document.querySelectorAll('.catalog-tab-btn');
-  const productCards = document.querySelectorAll('.product-card-open');
+function setupFlavorTabs() {
+  const tabs = document.querySelectorAll('.tab');
+  const flavors = document.querySelectorAll('.flavor');
 
-  if (!tabButtons.length || !productCards.length) return;
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const filter = tab.dataset.filter;
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetCategory = btn.getAttribute('data-filter');
-
-      tabButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      productCards.forEach(card => {
-        const categories = card.getAttribute('data-category').split(' ');
-        const isMatch = targetCategory === 'todos' || categories.includes(targetCategory);
-
-        card.style.display = isMatch ? 'flex' : 'none';
+      tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+      flavors.forEach((flavor) => {
+        flavor.hidden = filter !== 'todos' && flavor.dataset.category !== filter;
       });
     });
   });
 }
 
-/**
- * Configuração dos links diretos de WhatsApp
- */
 function setupWhatsAppLinks() {
-  document.querySelectorAll('[data-whatsapp]').forEach(element => {
-    const customMessage = element.getAttribute('data-whatsapp-message') || SORVEBOM_CONFIG.defaultMessage;
-    const url = `https://wa.me/${SORVEBOM_CONFIG.whatsappNumber}?text=${encodeURIComponent(customMessage)}`;
-    element.setAttribute('href', url);
-    element.setAttribute('target', '_blank');
-    element.setAttribute('rel', 'noopener noreferrer');
+  document.querySelectorAll('[data-whatsapp]').forEach((link) => {
+    const message = link.dataset.whatsappMessage || WHATSAPP_DEFAULT;
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
   });
-}
-
-/**
- * Rolagem suave com compensação para cabeçalho fixo
- */
-function setupSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-
-      const targetEl = document.querySelector(targetId);
-      if (targetEl) {
-        e.preventDefault();
-        const navHeight = document.querySelector('.site-nav')?.offsetHeight || 72;
-        const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - navHeight;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
-      }
-    });
-  });
-}
-
-/**
- * Atualização do ano corrente no rodapé
- */
-function setupCurrentYear() {
-  const yearEl = document.getElementById('current-year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
 }
