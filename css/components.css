@@ -69,12 +69,14 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--milk);
-  transition: box-shadow 200ms ease;
+  background: rgba(255, 248, 239, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: box-shadow 200ms ease, background-color 200ms ease;
 }
 
 .site-nav.scrolled {
-  box-shadow: 0 1px 0 var(--line);
+  box-shadow: 0 4px 16px rgba(43, 13, 25, 0.05), 0 1px 0 var(--line);
 }
 
 .nav-inner {
@@ -127,6 +129,10 @@
   min-height: 2.75rem;
   padding: 0 1.25rem;
   font-size: var(--text-base);
+}
+
+.nav-mobile-cta {
+  display: none;
 }
 
 .nav-toggle {
@@ -210,6 +216,7 @@
   overflow: hidden;
   border: 6px solid var(--milk);
   background: var(--cream);
+  box-shadow: 0 16px 36px rgba(43, 13, 25, 0.22);
 }
 
 .popsicle img {
@@ -233,7 +240,8 @@
   transform: translateX(-50%);
   border-radius: 0 0 var(--pill) var(--pill);
   background: var(--stick);
-  z-index: -1;
+  box-shadow: inset 0 4px 6px rgba(59, 29, 18, 0.25);
+  z-index: 0;
 }
 
 .hero-visual .popsicle-stick {
@@ -251,11 +259,15 @@
   height: auto;
   color: var(--berry);
   background: var(--milk);
+  vertical-align: bottom;
+  margin-top: -1px;
 }
 
 .drip-choco {
   color: var(--choco);
   background: var(--berry);
+  vertical-align: bottom;
+  margin-top: -1px;
 }
 
 /* --- Fatos -------------------------------------------------------------- */
@@ -344,6 +356,18 @@
   --tint: var(--sun-soft);
   display: flex;
   flex-direction: column;
+  animation: flavorFadeIn 280ms var(--ease);
+}
+
+@keyframes flavorFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .flavor[hidden] {
@@ -468,6 +492,7 @@
   aspect-ratio: 2 / 3;
   border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
   overflow: hidden;
+  box-shadow: 0 16px 32px rgba(43, 13, 25, 0.1);
 }
 
 .story-photo-side {
@@ -475,6 +500,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: 2.5rem;
+  box-shadow: 0 12px 24px rgba(43, 13, 25, 0.08);
 }
 
 .story-photos img {
@@ -585,6 +611,8 @@
   padding: clamp(2rem, 4vw, 3rem);
   border-radius: var(--radius-lg);
   background: var(--choco-soft);
+  border: 1px solid rgba(255, 248, 239, 0.12);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
 }
 
 .resale h3 {
@@ -681,11 +709,17 @@
   font-weight: 700;
   font-size: var(--text-sm);
   box-shadow: 0 6px 20px rgba(18, 140, 74, 0.35);
-  transition: transform 180ms var(--ease);
+  transition: transform 180ms var(--ease), box-shadow 180ms ease;
 }
 
 .float-whatsapp:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 140, 74, 0.45);
+}
+
+.float-whatsapp:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(18, 140, 74, 0.3);
 }
 
 /* --- Responsivo --------------------------------------------------------- */
@@ -713,6 +747,14 @@
 
   .nav-cta {
     display: none;
+  }
+
+  .nav-mobile-cta {
+    display: inline-flex;
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 3rem;
+    font-size: var(--text-base);
   }
 
   .nav-links {

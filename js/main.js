@@ -38,17 +38,37 @@ function setupMobileMenu() {
 }
 
 function setupFlavorTabs() {
-  const tabs = document.querySelectorAll('.tab');
+  const tabs = Array.from(document.querySelectorAll('.tab'));
   const flavors = document.querySelectorAll('.flavor');
+  if (!tabs.length) return;
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const filter = tab.dataset.filter;
+  const selectTab = (tab) => {
+    const filter = tab.dataset.filter;
 
-      tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
-      flavors.forEach((flavor) => {
-        flavor.hidden = filter !== 'todos' && flavor.dataset.category !== filter;
-      });
+    tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+    flavors.forEach((flavor) => {
+      const match = filter === 'todos' || flavor.dataset.category === filter;
+      flavor.hidden = !match;
+      if (match) {
+        flavor.style.animation = 'none';
+        flavor.offsetHeight; // trigger reflow to restart animation
+        flavor.style.animation = '';
+      }
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab));
+
+    tab.addEventListener('keydown', (e) => {
+      let targetIndex = null;
+      if (e.key === 'ArrowRight') targetIndex = (index + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') targetIndex = (index - 1 + tabs.length) % tabs.length;
+      if (targetIndex !== null) {
+        e.preventDefault();
+        tabs[targetIndex].focus();
+        selectTab(tabs[targetIndex]);
+      }
     });
   });
 }
