@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01",
+  "title": "Design System: Sorvebom",
+  "extensions": {
+    "typographyMeta": {
+      "display": {
+        "purpose": "Google Fonts Syne 800 (monumental, architectural headings inspired by HOZON and TŌPAS) and Space Grotesk 700 (Swiss neo-grotesque section titles)."
+      },
+      "editorial": {
+        "purpose": "Instrument Serif Italic 400 for delicate high-contrast editorial accents ('mais o sabor ganha foco')."
+      },
+      "body": {
+        "purpose": "Instrument Sans 400/500/600 for razor-sharp, modern readability and descriptions."
+      },
+      "mono": {
+        "purpose": "Space Mono 400/700 for HUD telemetry, timeline readouts, coordinates and metadata tags."
+      }
+    },
+    "motion": [
+      {
+        "name": "video-scroll-scrub",
+        "value": "dynamic 60fps velocity interpolation",
+        "purpose": "Continuous native video playback proportional to scroll velocity, scrubbing from 0.0s to 7.0s until the ice breaks and melts into pure creaminess without keyframe stutter."
+      },
+      {
+        "name": "camera-dolly-zoom",
+        "value": "scale(0.88 -> 1.22) translateZ(0 -> 70px)",
+        "purpose": "Cinematic camera dolly effect expanding the central photo in the viewport while neighboring cards scale down and take soft bokeh blur."
+      },
+      {
+        "name": "3d-axial-tilt",
+        "value": "perspective(1200px) rotateX(±3.5deg) rotateY(±9deg) rotateZ(±5deg)",
+        "purpose": "Multi-axis scene movement giving kinetic cards realistic physical depth as the user navigates the mosaic."
+      },
+      {
+        "name": "garnish-parallax",
+        "value": "depth-of-field 3D drift",
+        "purpose": "Floating fresh ingredients (strawberry, dark chocolate, ice crystals, mint) floating around the cards with depth-based translation and rotation."
+      },
+      {
+        "name": "atmospheric-shift",
+        "value": "900ms cubic-bezier transition",
+        "purpose": "Ambient background transitioning from glacial deep dark (#101114) to rich berry wine (#1C0D14) to velvet dark cocoa (#160D08)."
+      },
+      {
+        "name": "cursor",
+        "value": "flower spin + drag circle + close button",
+        "purpose": "Custom interactive cursor with difference blend mode and contextual transformations."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "860px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "1024px"
+      },
+      {
+        "name": "desktop-min",
+        "value": "1025px"
+      }
+    ],
+    "palette": {
+      "black": "#0E0E0E",
+      "dark-bg": "#121212",
+      "milk-bg": "#F9F8F5",
+      "sun-gold": "#FFC933",
+      "berry": "#C8005A",
+      "ice-cyan": "#70D6FF",
+      "cocoa-dark": "#160D08",
+      "wine-berry": "#1C0D14",
+      "whatsapp": "#25D366"
+    }
+  }
+}
