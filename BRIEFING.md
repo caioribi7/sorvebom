@@ -27,22 +27,16 @@
 
 ---
 
-## 3. Identidade Visual e Direção de Arte (Refs: Frozo & Zuga)
-* **Paleta de Cores:**
-  * **Amarelo Sol Sorvebom:** `#FFC933` / `#FFE156` (energia, verão, tradição da marca)
-  * **Laranja Terracota / Calda:** `#E8501E` (títulos secundários, badges e contrastes quentes estilo Zuga)
-  * **Azul Céu de Verão:** `#2EA8F6` (contraste refrescante no Hero Bento estilo Frozo e cor institucional da marca)
-  * **Rosa Morango / Framboesa:** `#FF3B77` (destaques de frutas e stickers)
-  * **Verde Pistache Pastel:** `#DAF0B4` (seção de avaliações e frescor)
-  * **Chocolate Mag Escuro:** `#23120B` (botões principais, textos de alto contraste e bordas)
-  * **Creme Baunilha:** `#FFFDF5` / `#FFF8DC` (fundo geral da página)
-* **Elementos Gráficos:**
-  * Bento Grid com cantos arredondados generosos (`28px` a `36px`)
-  * Divisores de seção ondulados (*scalloped waves* remetendo a bolas de sorvete)
-  * Stickers ilustrados em SVG (sol sorridente, morango, selos retrô com serrilhado, ícone de picolé embutido no título)
-* **Tipografia:**
-  * Títulos Display: `'Titan One'` / `'Paytone One'` / `'Fredoka'` (pesada, arredondada, apetitosa e impactante)
-  * Corpo e UI: `'Plus Jakarta Sans'` / `'Space Grotesk'` (leitura limpa e moderna)
+## 3. Identidade Visual e Direção de Arte (redesign "Calda")
+* **Paleta** (ancorada no magenta do logo oficial):
+  * **Magenta Sorvebom:** `#CF035C` (fundo do hero, história e rodapé; cor do logo)
+  * **Creme:** `#FFF6EC` (fundo das seções claras, texto sobre magenta)
+  * **Chocolate amargo:** `#2A0F14` (texto, seção de negócios, botões escuros)
+  * **Rosa morango:** `#FFB3CB` e **rosa claro** `#FFE3EC` (destaques e fundos das fotos de produto)
+  * **Cereja:** `#8A0038` (sombra da moldura) · **Menta:** `#94C6B3` (selo do hero, eco da embalagem Mag Cookies)
+* **Tipografia:** `Bricolage Grotesque` ExtraBold condensada (títulos), `DM Sans` (texto e interface), `Instrument Serif` itálico (toques afetivos).
+* **Elementos:** fotos oficiais das embalagens recortadas, selos inclinados, moldura polaroid, listas editoriais com linhas finas.
+* **Design de referência:** arquivo "sorvebom" no Paper, artboard "Landing — Desktop".
 
 ---
 

@@ -18,17 +18,10 @@
 
 ---
 
-### 3. Entregáveis do Projeto Sorvebom
-* [x] **Hero Split Bento Interativo (Ref. Frozo):**
-  * Painel solar amarelo com raios animados suaves, tipografia 3D com picolé integrado no título e seletor interativo de sabores em miniaturas.
-  * Painel azul-céu refrescante com fotografia editorial de verão, sticker dinâmico de preço/destaque e botão rápido de pedido.
-* [x] **Bento Row de Autoridade:**
-  * Selo circular laranja `+150 Sabores`, manifesto da marca e 2 cards de destaque rápido (*Mag Cookies* e *Morango Frutal*).
-* [x] **Catálogo "Favoritos do Dia" com Bordas Onduladas (Ref. Zuga):**
-  * Divisores *scalloped* (ondas de sorvete), cards recortados em formato de nuvem, stickers retrô (`TOP #1`, `CROCANTE`, `100% FRUTA`, `TRUFADO`) e filtro interativo por linha (Todos, Linha Mag, Frutais, Potes, Zero & Açaí).
-* [x] **Seção "Feito para a Vida Real" (História & Qualidade Desde 1983):**
-  * Mural fotográfico estilo *scrapbook* com stickers ilustrados (solzinho, morango, coração) + história da fundação em 1983 e certificação **FSSC 22000**.
-* [x] **Seção "Aprovado por Quem Ama Sorvete" (Reviews em Pistache Pastel):**
-  * Cards de depoimentos com avatares em formato de flor e 5 estrelas.
-* [x] **Formatos Perfeitos + Lojas Físicas & Expansão (Revenda/Franquia):**
-  * Vitrine dos formatos (Picolés, Potes 2L, Bufê/Eventos, Linha Zero) + endereços de Lajeado/RS e botões diretos para WhatsApp comercial.
+### 3. Entregáveis do Projeto Sorvebom (redesign "Calda", nov/2026)
+* [x] **Hero magenta:** logo oficial em creme, título "Gelado de verdade.", foto oficial do Mag Cookies em moldura arredondada e selo "+150 sabores".
+* [x] **Escolha sua linha:** Linha Mag, Picolés de Fruta, Potes Clássicos e Zero Açúcar com fotos oficiais das embalagens.
+* [x] **Nossa história:** foto em moldura polaroid, 1983, Martin e Tania Eckhardt e certificação **FSSC 22000**.
+* [x] **Passa aqui:** lojas de Lajeado e fábrica com telefone clicável e rota no Google Maps.
+* [x] **Para o seu negócio:** revenda, franquia e eventos com mensagens de WhatsApp específicas.
+* [x] **Responsivo:** desktop, tablet e celular, com menu em tela cheia no mobile.

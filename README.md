@@ -1,28 +1,37 @@
 # Sorvebom Sorvetes — Landing Page (MCode)
 
-Landing page de alta conversão desenvolvida pela **MCode** para a tradicional marca gaúcha de sorvetes **Sorvebom** (fundada em 1983 em Lajeado/Estrela - RS), fortemente inspirada na direção de arte das referências globais **Frozo** e **Zuga**.
+Landing page da **Sorvebom** (Lajeado/Estrela - RS, desde 1983), redesenhada pela **MCode** na direção "Calda": magenta do logo como cor dominante, creme e chocolate, fotos oficiais das embalagens e tipografia condensada expressiva.
 
-## ✨ Destaques da Implementação
+## Seções
 
-1. **Bento Hero Interativo (Ref. Frozo):**
-   * Painel solar amarelo com raios sutis, navegação integrada, tipografia display `Titan One` em alto relevo e selo circular laranja com picolé vetorial entre as palavras.
-   * **Seletor Interativo de Sabores (3 Miniaturas):** Ao clicar nas miniaturas no canto inferior direito do painel solar (*Morango Silvestre*, *Mag Cookies*, *Mag Bombom*), o painel direito atualiza instantaneamente a foto em destaque, o sticker inclinado e a atmosfera de cor.
-   * Segunda linha do Bento Grid com círculo laranja `+150 Sabores & Delícias`, manifesto da marca e 2 mini-cards de acesso rápido com seta diagonal (`↗`).
+1. **Hero** — "Gelado de verdade.", Mag Cookies em destaque e chamadas para sabores e lojas.
+2. **Escolha sua linha** — Linha Mag, Picolés de Fruta, Potes Clássicos e Zero Açúcar.
+3. **Nossa história** — 1983, Martin e Tania Eckhardt, certificação FSSC 22000.
+4. **Passa aqui** — lojas e fábrica com telefone e rota no Google Maps.
+5. **Para o seu negócio** — revenda, franquia e eventos via WhatsApp.
 
-2. **Seção "Favoritos do Dia" com Ondas de Sorvete (Ref. Zuga):**
-   * Divisores *scalloped* (bordas de bolas de sorvete/nuvens) conectando as seções.
-   * Filtro interativo sem recarregamento (*Todos*, *Linha Mag Trufada*, *Picolés de Fruta*, *Potes 2L & Especiais*).
-   * Cards estilo *Cloud Cutout* com stickers de canto (`TOP #1 VENDAS`, `100% TRUFADO`, `ZERO LACTOSE`, `RECEITA FAMÍLIA`) e botão direto para WhatsApp.
+## Estrutura
 
-3. **História Real (1983) & Prova Social:**
-   * Mural de fotos estilo *scrapbook* + história real da fundação por Martin e Tania Eckhardt e certificação internacional **FSSC 22000**.
-   * Seção em verde pistache pastel com 4 depoimentos e avatares em formato de florzinha.
-   * Vitrine de formatos + endereços reais das unidades em Lajeado/RS e captação de revendedores/franqueados via WhatsApp (`(51) 99979-3004`).
+| Caminho | Conteúdo |
+| --- | --- |
+| `index.html` | Página única, HTML semântico |
+| `css/tokens.css` | Paleta, fontes e espaçamentos |
+| `css/styles.css` | Layout e componentes, com breakpoints em 1240, 960 e 600 px |
+| `js/main.js` | Menu mobile e links de WhatsApp (`data-whatsapp`, `data-whatsapp-message`) |
+| `assets/images/produtos/` | Fotos oficiais recortadas (`.png` original, `.webp` usado no site) |
+| `assets/images/CREDITOS.md` | Origem e licença das imagens |
 
-## 🚀 Como visualizar localmente
+O design de referência está no Paper (arquivo "sorvebom", artboard "Landing — Desktop").
 
-Dentro de `projetos/sorvebom/`, você pode abrir o `index.html` diretamente no navegador ou subir um servidor estático rápido:
+## Visualizar localmente
 
 ```powershell
-npx serve projetos/sorvebom -l 4173
+python -m http.server 4173
 ```
+
+Abra http://127.0.0.1:4173. Não há build: HTML, CSS e JavaScript puros.
+
+## Pendências com o cliente
+
+- Confirmar o número da loja Júlio de Castilhos (630 no briefing, 693 em listagens públicas).
+- Confirmar se as lojas de Tramandaí e Capão da Canoa devem entrar na seção "Passa aqui".

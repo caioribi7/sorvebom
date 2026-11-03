@@ -1,29 +1,21 @@
 const WHATSAPP_NUMBER = '5551999793004';
-const WHATSAPP_DEFAULT = 'Oi! Vim pelo site da Sorvebom.';
+const WHATSAPP_DEFAULT = 'Olá! Vi o site da Sorvebom e quero saber onde encontrar os sorvetes perto de mim!';
 
 document.addEventListener('DOMContentLoaded', () => {
-  setupNavShadow();
   setupMobileMenu();
-  setupFlavorTabs();
   setupWhatsAppLinks();
-  document.getElementById('current-year').textContent = new Date().getFullYear();
+  document.getElementById('ano').textContent = new Date().getFullYear();
 });
 
-function setupNavShadow() {
-  const nav = document.querySelector('.site-nav');
-  const update = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-  update();
-  window.addEventListener('scroll', update, { passive: true });
-}
-
 function setupMobileMenu() {
-  const toggle = document.querySelector('.nav-toggle');
+  const toggle = document.querySelector('.nav__toggle');
   const menu = document.getElementById('menu');
 
   const setOpen = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    menu.classList.toggle('open', open);
+    menu.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
   };
 
   toggle.addEventListener('click', () => {
@@ -34,42 +26,6 @@ function setupMobileMenu() {
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setOpen(false);
-  });
-}
-
-function setupFlavorTabs() {
-  const tabs = Array.from(document.querySelectorAll('.tab'));
-  const flavors = document.querySelectorAll('.flavor');
-  if (!tabs.length) return;
-
-  const selectTab = (tab) => {
-    const filter = tab.dataset.filter;
-
-    tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
-    flavors.forEach((flavor) => {
-      const match = filter === 'todos' || flavor.dataset.category === filter;
-      flavor.hidden = !match;
-      if (match) {
-        flavor.style.animation = 'none';
-        flavor.offsetHeight; // trigger reflow to restart animation
-        flavor.style.animation = '';
-      }
-    });
-  };
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => selectTab(tab));
-
-    tab.addEventListener('keydown', (e) => {
-      let targetIndex = null;
-      if (e.key === 'ArrowRight') targetIndex = (index + 1) % tabs.length;
-      if (e.key === 'ArrowLeft') targetIndex = (index - 1 + tabs.length) % tabs.length;
-      if (targetIndex !== null) {
-        e.preventDefault();
-        tabs[targetIndex].focus();
-        selectTab(tabs[targetIndex]);
-      }
-    });
   });
 }
 

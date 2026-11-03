@@ -1,54 +1,40 @@
 /* ==========================================================================
-   TOKENS — SORVEBOM
-   Paleta tirada do próprio produto: magenta da logo, creme de leite,
-   casquinha, chocolate e o amarelo de verão.
+   TOKENS — SORVEBOM · Paleta "Calda"
+   Magenta do logo como chão, creme, chocolate amargo, rosa morango e cereja.
    ========================================================================== */
 
 :root {
   /* Marca */
-  --berry: #C8005A;
-  --berry-deep: #9A0045;
-  --berry-soft: #FFD6E6;
+  --berry: #CF035C;
+  --cherry: #8A0038;
+  --strawberry: #FFB3CB;
+  --blush: #FFE3EC;
+  --mint: #94C6B3;
 
-  /* Produto */
-  --milk: #FFF8EF;
-  --cream: #F8ECD9;
-  --cone: #E9B872;
-  --stick: #E7C58F;
-  --choco: #3B1D12;
-  --choco-soft: #5A3222;
-  --sun: #FFC83B;
-  --sun-soft: #FFE7A3;
+  /* Base */
+  --cream: #FFF6EC;
+  --choco: #2A0F14;
 
   /* Texto */
-  --ink: #2B0D19;
-  --ink-body: #5B3A45;
-  --ink-muted: #8A6B74;
-  --on-dark: #FFF8EF;
-  --on-dark-muted: rgba(255, 248, 239, 0.86);
+  --ink: #2A0F14;
+  --ink-body: #5C3F3A;
+  --on-berry: #FFE3EC;
+  --on-choco: #D9BFC4;
 
-  --line: rgba(43, 13, 25, 0.12);
-  --whatsapp: #128C4A;
+  /* Linhas */
+  --line-cream: #E8D3C8;
+  --line-berry: #E86A9A;
+  --line-choco: #5A3038;
 
-  /* Tipografia: display arredondado como a logo, texto corrido neutro */
-  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Tipografia */
+  --font-display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
 
-  --text-xs: 0.8125rem;
-  --text-sm: 0.9375rem;
-  --text-base: 1.0625rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.625rem;
-  --text-2xl: clamp(2rem, 1.4rem + 2.4vw, 3rem);
-  --text-hero: clamp(3rem, 1.6rem + 6vw, 6rem);
-
-  /* Ritmo */
-  --container: 1200px;
-  --gutter: clamp(1.25rem, 4vw, 2.5rem);
-  --section: clamp(4.5rem, 8vw, 7.5rem);
-  --radius: 14px;
-  --radius-lg: 28px;
-  --pill: 999px;
-
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Espaço */
+  --gutter: clamp(20px, 5vw, 72px);
+  --section-y: clamp(80px, 9vw, 128px);
+  --radius-card: 28px;
+  --radius-pill: 999px;
+  --max: 1440px;
 }
